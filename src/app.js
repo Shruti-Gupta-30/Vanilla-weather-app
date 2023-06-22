@@ -47,8 +47,20 @@ function displayTemperature(response) {
   );
 }
 
-let cityName = "Sydney";
-let apiKey = "62d4f30b9b9119acdb354bc943220200";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
+function search(city) {
+  let cityName = city;
+  let apiKey = "62d4f30b9b9119acdb354bc943220200";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(displayTemperature);
+}
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("New Delhi");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
