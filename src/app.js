@@ -55,6 +55,7 @@ function search(city) {
 
   axios.get(apiUrl).then(displayTemperature);
 }
+
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
