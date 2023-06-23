@@ -116,6 +116,7 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
+/*
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let fahrenheitTemperature = celsiusTemperature * (9 / 5) + 32;
@@ -134,10 +135,12 @@ function displayCelsiusTemperature(event) {
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
 }
+*/
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
+/*
 let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
@@ -145,5 +148,6 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+*/
 
 search("New Delhi");
